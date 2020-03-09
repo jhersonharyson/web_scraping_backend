@@ -11,8 +11,8 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
-@Table(appliesTo = "data_scrapped")
-public class DataScrapped {
+@Table(appliesTo = "data_scraped")
+public class DataScraped {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -21,10 +21,10 @@ public class DataScrapped {
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Data> data;
 
-    public DataScrapped() {
+    public DataScraped() {
     }
 
-    public DataScrapped(List<Data> data) {
+    public DataScraped(List<Data> data) {
         this.data = data;
     }
 }

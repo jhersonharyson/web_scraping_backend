@@ -6,7 +6,6 @@ import lombok.Setter;
 import org.hibernate.annotations.Table;
 
 import javax.persistence.*;
-import javax.validation.constraints.Size;
 import java.util.List;
 
 
@@ -30,16 +29,16 @@ public class DataContent {
 
     @Column
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<ScrappedContent> scrappedContent;
+    private List<ScrapedContent> scrapedContent;
 
 
     public DataContent() {
     }
 
 
-    public DataContent(Integer count, List<Data> content, List<ScrappedContent> scrappedContent) {
+    public DataContent(Integer count, List<Data> content, List<ScrapedContent> scrapedContent) {
         this.count = count;
         this.content = content;
-        this.scrappedContent = scrappedContent;
+        this.scrapedContent = scrapedContent;
     }
 }

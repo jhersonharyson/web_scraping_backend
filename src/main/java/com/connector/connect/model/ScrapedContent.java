@@ -12,20 +12,20 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
-@Table(appliesTo = "scrapped_content")
-public class ScrappedContent {
+@Table(appliesTo = "scraped_content")
+public class ScrapedContent {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private List<DataScrapped> dataScrapped;
+    private List<DataScraped> dataScraped;
 
-    public ScrappedContent() {
+    public ScrapedContent() {
     }
 
-    public ScrappedContent(List<DataScrapped> dataScrapped) {
-        this.dataScrapped = dataScrapped;
+    public ScrapedContent(List<DataScraped> dataScraped) {
+        this.dataScraped = dataScraped;
     }
 }

@@ -13,8 +13,8 @@ import java.util.List;
 
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController()
-@RequestMapping("/scrapper")
-public class ScrapperInterfaceController {
+@RequestMapping("/scraper")
+public class ScraperInterfaceController {
 
 
     @Autowired
@@ -34,7 +34,7 @@ public class ScrapperInterfaceController {
     }
 
     @PostMapping
-    ResponseEntity<Response<File>> receiveScrappedData(@RequestBody File file) {
+    ResponseEntity<Response<File>> receiveScrapedData(@RequestBody File file) {
         Response<File> response = new Response<>();
         try {
             response.setData(fileService.save(file));
@@ -76,4 +76,4 @@ public class ScrapperInterfaceController {
 
 
 //    SECRETARIA DE ESTADO DE DESENVOLVIMENTO URBANO E OBRAS PÚBLICAS:
-//        TERMO ADITIVO A CONTRATO: {count: 3, content: Array(3), scrappedContent: Array(3)}
+//        TERMO ADITIVO A CONTRATO: {count: 3, content: Array(3), scrapedContent: Array(3)}
